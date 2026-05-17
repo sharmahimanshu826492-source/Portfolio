@@ -135,12 +135,12 @@
   </nav>
 
   <!-- ===== HERO ===== -->
-  <section id="home" class="min-h-screen flex items-center pt-16 relative overflow-hidden bg-black" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(126, 217, 87, 0.2) 100%), url('Home_bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <section id="home" class="min-h-screen flex flex-col pt-16 md:pt-16 relative overflow-hidden bg-black" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(126, 217, 87, 0.2) 100%), url('Home_bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <!-- Background decorations -->
     <div class="absolute top-20 right-10 w-96 h-96 rounded-full bg-accent/10 blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20 w-full relative z-10 flex-grow flex items-center">
+      <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
         <!-- Left Content -->
         <div class="space-y-6">
           <div class="inline-flex items-center gap-2 border border-gray-700 rounded-full px-4 py-2">
@@ -204,11 +204,16 @@
           </div>
         </div>
 
-        <!-- Right — Profile Image -->
-        <div class="absolute bottom-0 -right-10">
+        <!-- Right — Profile Image (Desktop only) -->
+        <div class="hidden lg:block absolute bottom-0 -right-10">
           <img src="My_Image.png" alt="Himanshu Sharma" class="w-[600px] h-auto object-cover rounded-tl-2xl" style="mix-blend-mode: lighten; opacity: 0.95; max-height: 100vh;" /> 
         </div>
       </div>
+    </div>
+
+    <!-- Mobile Image - At the very bottom on mobile only -->
+    <div class="lg:hidden w-full px-4">
+      <img src="My_Image.png" alt="Himanshu Sharma" class="w-full max-w-sm mx-auto h-auto object-cover rounded-2xl" style="mix-blend-mode: lighten; opacity: 0.95;" />
     </div>
   </section>
 
